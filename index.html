@@ -85,8 +85,8 @@
             prato e maionese da casa
           </p>
           <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$ 32.90</p>
-            <button class="bg-gray-900 px-5 rounded add-to-card-btn" data-name="Hamburguer Duplo" data-price="32.90">
+            <p class="font-bold text-lg">R$ 31.90</p>
+            <button class="bg-gray-900 px-5 rounded add-to-card-btn" data-name="Hamburguer Smash" data-price="31.90">
               <i class="fa fa-cart-plus text-lg text-white"></i>
             </button>
           </div>
@@ -161,22 +161,21 @@
   <!-- Fim menu -->
 
   <!-- MODAL CART -->
-  <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99]
+  <div id="cart-modal" class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99]
   hidden items-center justify-center">
     <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
       <h2 class="text-center font-bold text-2xl  mb-2">Meu Carrinho</h2>
-      <div id="cart-items" class=" flex justify-between mb-2 flex-col">
+      <div id="cart-items" class=" flex justify-between mb-2 flex-col"> </div>
         <p class="font-bold">Total <span id="cart-total">0.00</span></p>
         <p class="font-bold mt-4">Endererço de Entrega:</p>
         <input type="text" placeholder="Digite seu endereço de completo..." id="address"
           class="w-full border-2 p-1 rounded my-1">
-        <p class="text-red-500 hidden">Digite seu endereço completo!</p>
+        <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
 
         <div class="flex items-center justify-between mt-4 w-full">
           <button id="close-modal-btn">Fechar</button>
           <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
         </div>
-      </div>
     </div>
   </div>
   <!-- FIM MODAL CART -->
@@ -190,6 +189,7 @@
     </button>
   </footer>
   <!-- Button Card Footer -->
+  <script src="script.js"></script>
 </body>
 
 </html>
