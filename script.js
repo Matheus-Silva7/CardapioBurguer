@@ -81,7 +81,7 @@ function updateCartModel() {
         <p>Qtd: ${item.quantity}</p>
         <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
       </div>
-      <button class="remove-btn" data-name"${item.name}>Remover</button>
+      <button class="remove-btn" data-name="${item.name}">Remover</button>
     </div
     `;
     cartItemsContainer.appendChild(cartItemElement);
@@ -107,6 +107,7 @@ cartItemsContainer.addEventListener("click", (event) => {
 function removeitemCard(name) {
   //acho a posição que ele esta na lista
   const index = cart.findIndex((item) => (item.name === name));
+  console.log(index)
 
   if (index !== -1) {
     const item = cart[index];
