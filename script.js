@@ -181,7 +181,7 @@ function checkOpen(){
   const data = new Date()
   const hora = data.getHours();
   console.log(hora)
-  return hora >= 21 && hora < 22; //true
+  return hora >= 18 && hora < 22; //true
 }
 
 const  spanItem = document.getElementById("date-span")
