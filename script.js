@@ -57,7 +57,17 @@ function addToCart(name, price) {
       quantity: 1,
     });
   }
-
+  Toastify({
+    text: "Produto adicionado ao carrinho!",
+    duration: 3000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "#34D399" // vermelho
+    }
+  }).showToast();
   updateCartModel();
 }
 
@@ -138,16 +148,17 @@ checkoutBtn.addEventListener('click', ()=>{
   const isOpen = checkOpen()
   if (!isOpen) {
     Toastify({
-      text: "Ops o restaurante está fechado",
+      text: "Ops o restaurante está fechado!",
       duration: 3000,
       close: true,
       gravity: "top", // `top` or `bottom`
-      position: "left", // `left`, `center` or `right`
+      position: "right", // `left`, `center` or `right`
       stopOnFocus: true, // Prevents dismissing of toast on hover
       style: {
         background: "#ef4444" // vermelho
       }
     }).showToast();
+    
     return;
   }
   
