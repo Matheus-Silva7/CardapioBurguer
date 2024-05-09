@@ -62,7 +62,7 @@ function addToCart(name, price) {
     duration: 3000,
     close: true,
     gravity: "top", // `top` or `bottom`
-    position: "left", // `left`, `center` or `right`
+    position: "right", // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
       background: "#34D399" // vermelho
