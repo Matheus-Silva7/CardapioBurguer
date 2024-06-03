@@ -95,7 +95,7 @@ function updateCartModel() {
     </div
     `;
     cartItemsContainer.appendChild(cartItemElement);
-    total = +item.price * item.quantity;
+    total += item.price * item.quantity;
   });
   cartTotal.textContent = total.toLocaleString("pt-BR", {
     style: "currency",
